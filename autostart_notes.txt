@@ -5,3 +5,7 @@ Select “Boot Options” then “Desktop/CLI” then “Console Autologin”
 sudo nano /etc/profile
 
 sudo python /home/pi/myscript.py
+
+
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+

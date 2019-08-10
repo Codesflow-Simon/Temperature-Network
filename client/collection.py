@@ -28,7 +28,7 @@ from post_request import post
 node = 'inside'
 
 sensor = W1ThermSensor()
-f = open('/home/pi/Desktop/Temperature-Network/client/templog', 'a+')
+f = open('/home/pi/Temperature-Network/client/templog', 'a+')
 t = time.asctime( time.localtime(time.time()) )
 f.write("-- re-booted: " + str(t) + "\n")
 f.close() 
@@ -39,7 +39,7 @@ while True:
     post({'temp':temperature, 'time':t}, node)
     print(t, temperature)
     x= str(t) + " " + str(temperature) + "\n"
-    f = open('/home/pi/Desktop/Temperature-Network/client/templog', 'a+')
+    f = open('/home/pi/Temperature-Network/client/templog', 'a+')
     f.write(x)  
     f.close()  
     time.sleep(300)
