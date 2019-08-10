@@ -3,3 +3,4 @@ certifi
 datetime
 flask
 pandas
+w1thermsensor
