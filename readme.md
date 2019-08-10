@@ -21,7 +21,7 @@ body: requires json file
     'time' is time of recording
 
 
-Endpoint: 127.0.0.1:5000/<csv_file>.csv
+Endpoint: 192.168.0.xx:5000/<csv_file>.csv
 Getting csv files
 
 requests: GET
