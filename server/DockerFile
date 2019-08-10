@@ -1,0 +1,21 @@
+#publicly available docker image "python" on docker hub will be pulled
+
+FROM python
+
+#creating directory helloworld in container (linux machine)
+
+RUN mkdir c:\home\temp
+WORKDIR /home/temp
+
+#copying helloworld.py from local directory to container's helloworld folder
+
+COPY . /home/temp/
+
+# Install any needed packages specified in requirements.txt
+
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+#running helloworld.py in container
+
+# CMD hostname -I
+CMD python /home/temp/app.py
