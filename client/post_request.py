@@ -3,7 +3,7 @@ import certifi
 import json
 import datetime as dt
 
-def post(diction, ip='http://172.17.0.4:5000'):
+def post(diction, node, ip='http://127.0.1.1:5000'):
     def dtconvert(attribute):
         if isinstance(attribute, dt.datetime):
             return attribute.__str__()
@@ -14,6 +14,5 @@ def post(diction, ip='http://172.17.0.4:5000'):
         cert_reqs='CERT_REQUIRED',
         ca_certs=certifi.where()
     )
-    r = http.request('POST', ip+'/datanode?node=outside', body=send)
+    r = http.request('POST', ip+'/datanode?node='+node, body=send)
 
-print(post({'temp': 22, 'time': dt.datetime.now()}))
